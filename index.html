@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles-index.css">
+    <title>Dashboard</title>
+    <script>
+        // Verifica si el usuario está autenticado
+        const isAuthenticated = sessionStorage.getItem('isAuthenticated');
+
+        if (!isAuthenticated) {
+            // Si no está autenticado, redirige al login
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <script>
+        function logout() {
+            sessionStorage.removeItem('isAuthenticated'); // Eliminar el estado de autenticación
+            window.location.href = 'login.html'; // Redirigir al login
+        }
+    </script>
+    <div class="dashboard-container">
+        <header>
+            <h1>Dashboard de Proyectos de Ciberseguridad</h1>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <button onclick="logout()">Cerrar Sesión</button>
+            </nav>
+        </header>
+        <main>
+            <section id="projects">
+                <h2>Mis Proyectos</h2>
+                <div class="project-card">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción del proyecto 1.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción del proyecto 2.</p>
+                </div>
+                <!-- Añade más proyectos según sea necesario -->
+            </section>
+        </main>
+    </div>
+</body>
+</html>
