@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Ciberseguridad</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Portafolio de Ciberseguridad</h1>
+    </header>
+
+    <main>
+        <section class="tutorial">
+            <h2>Auditoria Wifi con Eviltrust en Linux</h2>
+            <p>En esta documentacion aprenderas a usar la herramienta Eviltrust en Linux.</p>
+            <button onclick="mostrarTutorial('tutorial1')">Ver Tutorial</button>
+            <div id="tutorial1" class="tutorial-contenido" style="display: none;">
+                <p>Aquí está el contenido del tutorial...</p>
+            </div>
+        </section>
+
+        <section class="tutorial">
+            <h2>Guía 2: Instalación de un IDS (Snort)</h2>
+            <p>Configura un Sistema de Detección de Intrusos en tu red.</p>
+            <button onclick="mostrarTutorial('tutorial2')">Ver Tutorial</button>
+            <div id="tutorial2" class="tutorial-contenido" style="display: none;">
+                <p>Contenido del tutorial...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Portafolio de Ciberseguridad</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
